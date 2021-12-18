@@ -1,5 +1,5 @@
-JavaLessons 
-@MyFirstGoItJava2021Bot.
 
-   ![](sticker.webp)
+  JavaLessons 
+           @MyFirstGoItJava2021Bot.
 
+   __![](sticker.webp)__
