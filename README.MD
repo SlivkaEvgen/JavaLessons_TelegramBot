@@ -1,3 +1,3 @@
-@MyFirstGoItJava2021Bot
+JavaLessons @MyFirstGoItJava2021Bot.
 
 ![](JavaLessons.jpg)![](sticker.webp)
