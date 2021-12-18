@@ -1,7 +1,5 @@
 package studyblock;
 
-import java.io.*;
-import java.util.ArrayList;
 import com.google.gson.Gson;
 import googleSheets.GoogleSheetsApiController;
 import lombok.SneakyThrows;
@@ -14,16 +12,18 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import registration.User;
 import registration.UserStudyStatus;
 import telegram.TelegramController;
 import telegram.TelegramControllerImpl;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudyBlock {
 

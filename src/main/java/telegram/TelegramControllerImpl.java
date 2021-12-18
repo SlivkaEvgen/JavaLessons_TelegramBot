@@ -1,7 +1,5 @@
 package telegram;
 
-import java.io.Serializable;
-
 import lombok.SneakyThrows;
 import notification.Settings;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -9,6 +7,8 @@ import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import registration.Registration;
 import studyblock.StudyBlock;
+
+import java.io.Serializable;
 
 public abstract class TelegramControllerImpl extends TelegramLongPollingBot implements TelegramController {
 
