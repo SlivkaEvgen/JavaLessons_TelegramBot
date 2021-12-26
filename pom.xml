@@ -23,7 +23,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.32</version>
+            <version>2.0.0-alpha4</version>
         </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>com.google.apis</groupId>
             <artifactId>google-api-services-sheets</artifactId>
-            <version>v4-rev614-1.18.0-rc</version>
+            <version>v4-rev20210629-1.32.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.auth</groupId>
@@ -81,5 +81,7 @@
             <artifactId>emoji-java</artifactId>
             <version>5.1.1</version>
         </dependency>
+
     </dependencies>
+
 </project>
