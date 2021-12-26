@@ -75,8 +75,8 @@ public class Settings {
         replyKeyboardMarkup.setResizeKeyboard(true);
         replyKeyboardMarkup.setOneTimeKeyboard(true);
         List<KeyboardRow> keyboard = new ArrayList<>();
-        for (int i = 0; i < buttons.length; i++) {
-            List<String> list = Arrays.stream(buttons[i]).collect(Collectors.toList());
+        for (String[] button : buttons) {
+            List<String> list = Arrays.stream(button).collect(Collectors.toList());
             KeyboardRow keyboardRow = new KeyboardRow();
             keyboardRow.addAll(list);
             keyboard.add(keyboardRow);

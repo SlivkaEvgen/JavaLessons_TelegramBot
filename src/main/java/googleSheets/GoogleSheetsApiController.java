@@ -25,11 +25,15 @@ import java.util.*;
 public class GoogleSheetsApiController {
 
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
+
     private static Properties appProp;
 
     public static ArrayList<String> blocksNames;
+
     public static ArrayList<String> questions;
+
     public static ArrayList<String> answers;
+
     public static ArrayList<String> videos;
 
     public GoogleSheetsApiController() {
@@ -70,11 +74,11 @@ public class GoogleSheetsApiController {
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         String spreadsheetID = getProperties().getProperty("spreadsheet_id");
         Sheets service = (new Builder(httpTransport, JSON_FACTORY, getCredentials())).setApplicationName("Google API").build();
-        Spreadsheet sheetMetadata = (Spreadsheet) service.spreadsheets().get(spreadsheetID).execute();
+        Spreadsheet sheetMetadata = service.spreadsheets().get(spreadsheetID).execute();
         List<Sheet> sheets = sheetMetadata.getSheets();
         blocksNames = new ArrayList<>();
-        for (int i = 0; i < sheets.size(); i++) {
-            blocksNames.add(sheets.get(i).getProperties().getTitle());
+        for (Sheet sheet : sheets) {
+            blocksNames.add(sheet.getProperties().getTitle());
         }
         return blocksNames;
     }
@@ -85,15 +89,15 @@ public class GoogleSheetsApiController {
         String range = getProperties().getProperty("cell_range");
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         Sheets service = (new Builder(httpTransport, JSON_FACTORY, getCredentials())).setApplicationName("Google API").build();
-        Spreadsheet sheetMetadata = (Spreadsheet) service.spreadsheets().get(spreadsheetID).execute();
+        Spreadsheet sheetMetadata = service.spreadsheets().get(spreadsheetID).execute();
         List<Sheet> sheets = sheetMetadata.getSheets();
-        String range1 = (String) ((SheetProperties) ((Sheet) sheets.get(0)).get("properties")).get("title");
-        ValueRange response = (ValueRange) service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
+        String range1 = (String) ((SheetProperties) sheets.get(0).get("properties")).get("title");
+        ValueRange response = service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
         List<List<Object>> values = response.getValues();
         Iterator<List<Object>> var10 = values.iterator();
         questions = new ArrayList<>();
         while (var10.hasNext()) {
-            List row = var10.next();
+            List<Object> row = var10.next();
             if (!row.isEmpty()) {
                 questions.add(row.get(0).toString());
             }
@@ -108,15 +112,15 @@ public class GoogleSheetsApiController {
         String range = getProperties().getProperty("cell_range");
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         Sheets service = (new Builder(httpTransport, JSON_FACTORY, getCredentials())).setApplicationName("Google API").build();
-        Spreadsheet sheetMetadata = (Spreadsheet) service.spreadsheets().get(spreadsheetID).execute();
+        Spreadsheet sheetMetadata = service.spreadsheets().get(spreadsheetID).execute();
         List<Sheet> sheets = sheetMetadata.getSheets();
-        String range1 = (String) ((SheetProperties) ((Sheet) sheets.get(0)).get("properties")).get("title");
-        ValueRange response = (ValueRange) service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
+        String range1 = (String) ((SheetProperties) sheets.get(0).get("properties")).get("title");
+        ValueRange response = service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
         List<List<Object>> values = response.getValues();
         Iterator<List<Object>> var10 = values.iterator();
-        answers = new ArrayList<String>();
+        answers = new ArrayList<>();
         while (var10.hasNext()) {
-            List row = var10.next();
+            List<Object> row = var10.next();
             if (!row.isEmpty()) {
                 answers.add(row.get(1).toString());
             }
@@ -131,15 +135,15 @@ public class GoogleSheetsApiController {
         String range = getProperties().getProperty("cell_range");
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         Sheets service = (new Builder(httpTransport, JSON_FACTORY, getCredentials())).setApplicationName("Google API").build();
-        Spreadsheet sheetMetadata = (Spreadsheet) service.spreadsheets().get(spreadsheetID).execute();
+        Spreadsheet sheetMetadata = service.spreadsheets().get(spreadsheetID).execute();
         List<Sheet> sheets = sheetMetadata.getSheets();
-        String range1 = (String) ((SheetProperties) ((Sheet) sheets.get(0)).get("properties")).get("title");
-        ValueRange response = (ValueRange) service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
+        String range1 = (String) ((SheetProperties) sheets.get(0).get("properties")).get("title");
+        ValueRange response = service.spreadsheets().values().get(spreadsheetID, range1 + range).execute();
         List<List<Object>> values = response.getValues();
         Iterator<List<Object>> var10 = values.iterator();
-        videos = new ArrayList<String>();
+        videos = new ArrayList<>();
         while (var10.hasNext()) {
-            List row = var10.next();
+            List<Object> row = var10.next();
             if (!row.isEmpty()) {
                 videos.add(row.get(2).toString());
                 //System.out.println(videos);

@@ -7,8 +7,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class NotificationTimer {
+
     private final Timer timer = new Timer();
+
     private final int day;
+
     private static final int MILLISECONDS_TO_DAY = 1000 * 60 * 60 * 24;
 
     public NotificationTimer(int day) {

@@ -13,7 +13,9 @@ import java.io.Serializable;
 public abstract class TelegramControllerImpl extends TelegramLongPollingBot implements TelegramController {
 
     private final Registration registration = new Registration();
+
     private final StudyBlock studyBlock = new StudyBlock();
+
     private final Settings settings = new Settings();
 
     @Override
@@ -34,38 +36,30 @@ public abstract class TelegramControllerImpl extends TelegramLongPollingBot impl
 
     @Override
     public void onUpdateReceived(Update update) {
-
         if (update.hasMessage() && update.getMessage().hasText() && update.getMessage().getText().startsWith("/settings")) {
             settings.handleTextUpdate(update, this);
         }
-
         if (update.hasMessage() && update.getMessage().hasText() && update.getMessage().getText().startsWith("/start")) {
             registration.handleTextUpdate(update, this);
         } else if (update.hasMessage() && update.getMessage().hasText() && !update.getMessage().getText().startsWith("⏺ ") && !update.getMessage().getText().startsWith("\uD83D") && !update.getMessage().getText().startsWith("/settings")) {
-
             System.out.println(update.getMessage().getText());
             registration.handleTextUpdate(update, this);
         }
         if (update.hasCallbackQuery() && !update.getCallbackQuery().getData().startsWith("answer")) {
             registration.handleCallbackQuery(update, this);
         }
-
         if (update.hasMessage() && update.getMessage().hasText() && update.getMessage().getText().equals("⏺ Java")) {
             studyBlock.handleTextUpdate(update, this);
         }
-
         if (update.hasCallbackQuery() && update.getCallbackQuery().getData().equals("Go")) {
             studyBlock.handleTextUpdate(update, this);
         }
-
         if (update.hasCallbackQuery() && update.getCallbackQuery().getData().startsWith("answer")) {
             studyBlock.handleCallbackQuery(update, this);
         }
-
         if (update.hasCallbackQuery() && update.getCallbackQuery().getData().startsWith("next")) {
             studyBlock.handleCallbackQuery(update, this);
         }
-
         if (update.hasMessage() && update.getMessage().hasText() && update.getMessage().getText().startsWith("\uD83D")) {
             settings.handleCallbackQuery(update, this);
         }

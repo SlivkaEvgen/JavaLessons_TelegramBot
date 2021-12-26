@@ -33,10 +33,9 @@ public class User {
         this.currentQuestion = 0;
     }
 
-    public User(long chatId, String email, String groupName) {
-
-        this.chatId = chatId;
-        this.email = email;
-        this.groupName = groupName;
-    }
 }
+//    public User(long chatId, String email, String groupName) {
+//        this.chatId = chatId;
+//        this.email = email;
+//        this.groupName = groupName;
+//    }

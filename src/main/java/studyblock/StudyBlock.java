@@ -28,12 +28,15 @@ import java.util.stream.Collectors;
 public class StudyBlock {
 
     public static int currentQuestion;
+
     public static String currentBlock;
 
     private final List<String> blockQuestions = GoogleSheetsApiController.Questions();
+
     private final List<String> blockAnswers = GoogleSheetsApiController.Answers();
 
     private static final ArrayList<User> tempUserBase = new ArrayList<>();
+
     private static final String FILE_NAME = "UserBase/user.json";
 
     public void handleCallbackQuery(Update update, TelegramControllerImpl telegramController) { //реакция на нажатие кнопок
@@ -45,16 +48,16 @@ public class StudyBlock {
                 sendText(chatId, blockAnswers.get(currentQuestion), 0, telegramController);
                 break;
             case "next":
-                if (currentQuestion<blockQuestions.size()-1){
-                currentQuestion++;
+                if (currentQuestion < blockQuestions.size() - 1) {
+                    currentQuestion++;
                     UserStudyStatus.changeUserStudyStatus(chatId, currentQuestion, currentBlock);
-                } else{
+                } else {
 
                     InputStream in3 = StudyBlock.class.getResourceAsStream("/sticker6.webp");
 
                     SendSticker sticker3 = new SendSticker();
                     sticker3.setChatId(String.valueOf(chatId));
-                    InputFile stickerFile3 = new InputFile(in3,"sticker6.webp");
+                    InputFile stickerFile3 = new InputFile(in3, "sticker6.webp");
                     sticker3.setSticker(stickerFile3);
 
                     try {
@@ -73,6 +76,7 @@ public class StudyBlock {
                 break;
         }
     }
+
     public void handleTextUpdate(Update update, TelegramControllerImpl telegramController) { // обработка Go
 
         if (update.hasCallbackQuery() && update.getCallbackQuery().getData().equals("Go")) {
@@ -98,8 +102,7 @@ public class StudyBlock {
                 sendText(chatId, "Продолжим с места, где остановились!\n Раздел " + currentBlock, 0, telegramController);
                 String messageText = blockQuestions.get(currentQuestion);
                 sendText(chatId, messageText, 1, telegramController);
-            }
-            else {
+            } else {
                 long chatId = update.getCallbackQuery().getFrom().getId();
                 String messageText = "Выбери интересующий тебя блок:";
                 sendText(chatId, messageText, 2, telegramController);
@@ -118,7 +121,7 @@ public class StudyBlock {
 
             SendSticker sticker = new SendSticker();
             sticker.setChatId(String.valueOf(chatId));
-            InputFile stickerFile = new InputFile(in,"sticker1.webp");
+            InputFile stickerFile = new InputFile(in, "sticker1.webp");
             sticker.setSticker(stickerFile);
 
             try {
@@ -146,6 +149,7 @@ public class StudyBlock {
         }
         telegramController.sendMethod(sendMessageRequest);
     }
+
     @SneakyThrows
     private ReplyKeyboard createBlockKeyboard() {
         List<String> blocksNames = GoogleSheetsApiController.Blocks();
