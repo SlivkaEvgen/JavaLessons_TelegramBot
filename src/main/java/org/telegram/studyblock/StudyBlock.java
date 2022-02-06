@@ -1,9 +1,9 @@
-package studyblock;
+package org.telegram.studyblock;
 
 import java.io.*;
 import java.util.ArrayList;
 import com.google.gson.Gson;
-import googleSheets.GoogleSheetsApiController;
+import org.telegram.googleSheets.GoogleSheetsApiController;
 import lombok.SneakyThrows;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendSticker;
@@ -20,10 +20,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import registration.User;
-import registration.UserStudyStatus;
-import telegram.TelegramController;
-import telegram.TelegramControllerImpl;
+import org.telegram.registration.User;
+import org.telegram.registration.UserStudyStatus;
+import org.telegram.bot.TelegramController;
+import org.telegram.bot.TelegramControllerImpl;
 
 public class StudyBlock {
 

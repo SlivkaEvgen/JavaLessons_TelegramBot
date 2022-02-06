@@ -1,4 +1,4 @@
-package telegram;
+package org.telegram.bot;
 
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 

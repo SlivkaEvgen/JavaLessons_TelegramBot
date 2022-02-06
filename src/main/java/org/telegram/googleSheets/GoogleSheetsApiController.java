@@ -1,4 +1,4 @@
-package googleSheets;
+package org.telegram.googleSheets;
 
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpRequestInitializer;
@@ -156,7 +156,7 @@ public class GoogleSheetsApiController {
 //// (powered by FernFlower decompiler)
 ////
 //
-//package googleSheets;
+//package org.telegram.googleSheets;
 //
 //import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 //import com.google.api.client.http.HttpRequestInitializer;

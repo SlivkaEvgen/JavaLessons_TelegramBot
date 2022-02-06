@@ -1,4 +1,4 @@
-package telegram;
+package org.telegram.bot;
 
 public class TelegramConstants {
     //    public static final String BOT_NAME = "JavaLessons";//"MyFirstGoItJava2021Bot";
