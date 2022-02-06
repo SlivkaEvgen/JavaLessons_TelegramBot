@@ -1,2 +1,1 @@
-worker: sh target/GW_bot
-
+worker: java -jar target/GW_bot-1.0-SNAPSHOT.jar org.telegram.JavaLessons_TelegramBot
