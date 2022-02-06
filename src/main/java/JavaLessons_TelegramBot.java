@@ -9,7 +9,6 @@ public class JavaLessons_TelegramBot {
 
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
 
-        telegramBotsApi.registerBot(new TelegramControllerImpl() {
-        });
+        telegramBotsApi.registerBot(new TelegramControllerImpl() {});
     }
 }

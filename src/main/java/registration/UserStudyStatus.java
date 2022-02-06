@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //статический утилитный класс. Единственный публичный метод получает на вход e-mail (для идентификации пользователя в базе) и новые данные по номеру и названию главы.
+
 public class UserStudyStatus {
 
     private static final String FILE_NAME = "UserBase/user.json";

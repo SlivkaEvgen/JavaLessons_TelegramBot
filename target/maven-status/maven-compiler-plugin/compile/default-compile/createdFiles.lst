@@ -1,8 +1,9 @@
+registration/UserList.class
+notification/Settings.class
+notification/NotificationTimer$1.class
 registration/UserStudyStatus.class
 telegram/TelegramControllerImpl.class
-registration/UserList.class
 registration/Registration.class
-notification/Settings.class
 telegram/TelegramConstants.class
 registration/User.class
 notification/NotificationTimer.class
@@ -13,4 +14,3 @@ JavaLessons_TelegramBot.class
 registration/User$UserBuilder.class
 studyblock/StudyBlock.class
 notification/UserNoActivityTimer.class
-notification/NotificationTimer$1.class
