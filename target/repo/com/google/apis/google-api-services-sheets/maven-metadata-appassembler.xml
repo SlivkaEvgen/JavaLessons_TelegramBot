@@ -3,10 +3,10 @@
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-sheets</artifactId>
   <versioning>
-    <release>v4-rev614-1.18.0-rc</release>
+    <release>v4-rev20210629-1.32.1</release>
     <versions>
-      <version>v4-rev614-1.18.0-rc</version>
+      <version>v4-rev20210629-1.32.1</version>
     </versions>
-    <lastUpdated>20220206231819</lastUpdated>
+    <lastUpdated>20220206234517</lastUpdated>
   </versioning>
 </metadata>

@@ -3,10 +3,10 @@
   <groupId>com.google.guava</groupId>
   <artifactId>guava</artifactId>
   <versioning>
-    <release>31.0.1-android</release>
+    <release>31.0.1-jre</release>
     <versions>
-      <version>31.0.1-android</version>
+      <version>31.0.1-jre</version>
     </versions>
-    <lastUpdated>20220206231819</lastUpdated>
+    <lastUpdated>20220206234517</lastUpdated>
   </versioning>
 </metadata>
