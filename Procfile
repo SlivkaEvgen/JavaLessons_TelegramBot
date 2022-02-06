@@ -1,1 +1,1 @@
-web: java -jar target/GW_bot-1.0-SNAPSHOT.jar
+worker:  bundle exec rake jobs:work
