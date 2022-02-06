@@ -1,6 +1,6 @@
-package notification;
+package org.telegram.notification;
 
-import googleSheets.GoogleSheetsApiController;
+import org.telegram.googleSheets.GoogleSheetsApiController;
 import lombok.SneakyThrows;
 
 import java.util.Timer;

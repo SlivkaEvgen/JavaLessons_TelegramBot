@@ -1,7 +1,9 @@
+package org.telegram;
+
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import telegram.TelegramControllerImpl;
+import org.telegram.bot.TelegramControllerImpl;
 
 public class JavaLessons_TelegramBot {
 

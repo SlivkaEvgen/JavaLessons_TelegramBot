@@ -81,4 +81,48 @@
             <version>5.1.1</version>
         </dependency>
     </dependencies>
+<!--</project>-->
+    <build>
+
+    <plugins>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.1.1</version>
+        <configuration>
+            <assembleDirectory>target</assembleDirectory>
+            <programs>
+                <program>
+                    <mainClass>org.telegram.JavaLessons_TelegramBot</mainClass>
+                    <name>GW_bot</name>
+                </program>
+            </programs>
+        </configuration>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>assemble</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+<!--</plugins>-->
 </project>
+<!--</build>-->

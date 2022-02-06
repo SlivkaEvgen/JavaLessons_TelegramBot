@@ -1,4 +1,4 @@
-package notification;
+package org.telegram.notification;
 
 public class UserNoActivityTimer {
 

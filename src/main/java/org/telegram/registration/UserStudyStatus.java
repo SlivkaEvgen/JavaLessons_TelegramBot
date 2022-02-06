@@ -1,4 +1,4 @@
-package registration;
+package org.telegram.registration;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

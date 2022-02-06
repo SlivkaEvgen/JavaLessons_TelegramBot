@@ -1,4 +1,4 @@
-package registration;
+package org.telegram.registration;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,9 +12,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import studyblock.StudyBlock;
-import telegram.TelegramController;
-import telegram.TelegramControllerImpl;
+import org.telegram.studyblock.StudyBlock;
+import org.telegram.bot.TelegramController;
+import org.telegram.bot.TelegramControllerImpl;
 
 import java.io.*;
 import java.util.*;

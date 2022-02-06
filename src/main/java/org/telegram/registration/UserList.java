@@ -1,4 +1,4 @@
-package registration;
+package org.telegram.registration;
 
 import java.util.HashMap;
 import java.util.Map;

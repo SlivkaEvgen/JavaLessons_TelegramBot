@@ -1,4 +1,4 @@
-package registration;
+package org.telegram.registration;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

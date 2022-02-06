@@ -1,14 +1,14 @@
-package telegram;
+package org.telegram.bot;
 
 import java.io.Serializable;
 
 import lombok.SneakyThrows;
-import notification.Settings;
+import org.telegram.notification.Settings;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import registration.Registration;
-import studyblock.StudyBlock;
+import org.telegram.registration.Registration;
+import org.telegram.studyblock.StudyBlock;
 
 public abstract class TelegramControllerImpl extends TelegramLongPollingBot implements TelegramController {
 
