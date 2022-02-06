@@ -25,7 +25,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.32</version>
+            <version>1.7.35</version>
         </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambotsextensions</artifactId>
-            <version>5.4.0.1</version>
+            <version>5.5.0</version>
         </dependency>
         <dependency>
             <groupId>commons-validator</groupId>
@@ -45,27 +45,28 @@
         <dependency>
             <groupId>com.google.api-client</groupId>
             <artifactId>google-api-client</artifactId>
-            <version>1.32.2</version>
+            <version>1.33.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.apis</groupId>
             <artifactId>google-api-services-sheets</artifactId>
-            <version>v4-rev614-1.18.0-rc</version>
+            <version>v4-rev20210629-1.32.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.auth</groupId>
             <artifactId>google-auth-library-credentials</artifactId>
-            <version>1.2.2</version>
+            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.auth</groupId>
             <artifactId>google-auth-library-oauth2-http</artifactId>
-            <version>1.2.2</version>
+            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client-jackson2</artifactId>
             <version>1.41.2</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
