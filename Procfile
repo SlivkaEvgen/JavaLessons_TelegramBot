@@ -1,1 +1,1 @@
-worker: java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -cp ./target/classes:./target/dependency/* mymac.IDEAProjects.Рабочие.JavaLessons_TelegramBot.src.main.java.JavaLessons_TelegramBot
+worker: java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -cp ./target/classes:./target/dependency/* org.telegram.JavaLessons_TelegramBot
