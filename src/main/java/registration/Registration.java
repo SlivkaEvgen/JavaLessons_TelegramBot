@@ -23,19 +23,13 @@ import java.util.stream.Collectors;
 public class Registration {
 
     private final HashMap<Long, String> requestBase = new HashMap<>();
-
     private final HashMap<Long, User> tempUser = new HashMap<>();
-
     private final ArrayList<User> tempUserBase = new ArrayList<>();
 
     private static final String DESTINATION = "UserBase/user.json";
-
     private static final String GROUP_NAME_REQUEST = "Group";
-
     private static final String USER_NAME_REQUEST = "Name";
-
     private static final String USER_SURNAME_REQUEST = "Surname";
-
     private static final String STUDY_START_REQUEST = "Go";
 
     public void handleTextUpdate(Update update, TelegramControllerImpl telegramController) { //обработка "/start" и текстового сообщения от пользователя при наличии запроса от бота

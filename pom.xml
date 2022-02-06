@@ -23,7 +23,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>2.0.0-alpha4</version>
+            <version>1.7.32</version>
         </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
@@ -81,7 +81,5 @@
             <artifactId>emoji-java</artifactId>
             <version>5.1.1</version>
         </dependency>
-
     </dependencies>
-
 </project>
