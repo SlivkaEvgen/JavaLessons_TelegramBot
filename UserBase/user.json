@@ -4,19 +4,4 @@
   "chatId": 3654,
   "currentQuestion": 5,
   "currentBlock": "Java"
-}, {
-  "email": "itm.ikhomenko@gmail.com",
-  "groupName": "GoIT2",
-  "chatId": 459573550,
-  "userName": "Inna",
-  "userSurname": "Khomenko",
-  "currentQuestion": 43,
-  "currentBlock": "⏺ Java"
-}, {
-  "email": "allrent@com.ua",
-  "groupName": "go-it",
-  "chatId": 533482085,
-  "userName": "ooo",
-  "userSurname": "ooo2",
-  "currentQuestion": 1
 }]
