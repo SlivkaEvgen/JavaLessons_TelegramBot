@@ -97,7 +97,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>com.home.server.TelegramBot</mainClass>
+                            <mainClass>org.telegram.JavaLessons_TelegramBot</mainClass>
                             <name>workerBot</name>
                         </program>
                     </programs>
