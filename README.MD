@@ -1,3 +1,4 @@
 [JavaLessonsBot](https://t.me/MyFirstGoItJava2021Bot)
- 
-   __![](sticker.webp)__
+
+__![](sticker.webp)__
+
